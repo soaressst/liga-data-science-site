@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga Data Science UFPR — Ciência de dados na universidade</title>
+    <!-- Fontes oficiais Arquivo e Source Sans 3 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Source Sans 3', 'sans-serif'],
+                        display: ['Archivo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <div class="flex min-h-screen flex-col">
+        <!-- Header Oficial com aba TAOcast -->
+        <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+                <a class="flex items-center gap-3" href="index.html">
+                    <img src="logo_LDS.png" alt="Logotipo Liga Data Science UFPR" class="h-8 w-auto object-contain"/>
+                    <span class="font-display font-bold text-lg tracking-tight text-blue-900">Liga Data Science</span>
+                </a>
+                <nav class="flex flex-wrap items-center justify-end gap-1 text-sm font-medium">
+                    <a class="rounded-full px-3.5 py-2 text-blue-900 bg-blue-50 transition-colors font-semibold" href="index.html">Início</a>
+                    <a href="sobre.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Sobre</a>
+                    <a href="projetos.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Projetos</a>
+                    <a href="pipeline.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Pipeline (Teaching)</a>
+                    <a href="taocast.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">TAOcast</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Section Oficial (Fundo Azul com Gráfico SVG de Trás) -->
+            <section class="relative overflow-hidden bg-[#162d50] text-white border-b border-blue-950">
+                <!-- Gráfico SVG de Fundo Transparente -->
+                <svg viewBox="0 0 200 100" class="pointer-events-none absolute inset-x-0 bottom-0 h-48 w-full text-blue-300/15" role="presentation" aria-hidden="true" preserveAspectRatio="none">
+                    <line x1="0" y1="20" x2="200" y2="20" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="40" x2="200" y2="40" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="60" x2="200" y2="60" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="80" x2="200" y2="80" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <rect x="6" y="62" width="14" height="38" rx="3" fill="currentColor" fill-opacity="0.18"></rect>
+                    <rect x="34" y="38" width="14" height="62" rx="3" fill="currentColor" fill-opacity="0.24"></rect>
+                    <rect x="62" y="54" width="14" height="46" rx="3" fill="currentColor" fill-opacity="0.3"></rect>
+                    <rect x="90" y="22" width="14" height="78" rx="3" fill="currentColor" fill-opacity="0.36"></rect>
+                    <rect x="118" y="45" width="14" height="55" rx="3" fill="currentColor" fill-opacity="0.42"></rect>
+                    <rect x="146" y="8" width="14" height="92" rx="3" fill="currentColor" fill-opacity="0.48"></rect>
+                    <rect x="174" y="30" width="14" height="70" rx="3" fill="currentColor" fill-opacity="0.54"></rect>
+                    <polyline points="13,54 41,30 69,46 97,14 125,37 153,0 181,22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                    <circle cx="13" cy="54" r="2.4" fill="currentColor"></circle>
+                    <circle cx="41" cy="30" r="2.4" fill="currentColor"></circle>
+                    <circle cx="69" cy="46" r="2.4" fill="currentColor"></circle>
+                    <circle cx="97" cy="14" r="2.4" fill="currentColor"></circle>
+                    <circle cx="125" cy="37" r="2.4" fill="currentColor"></circle>
+                    <circle cx="153" cy="0" r="2.4" fill="currentColor"></circle>
+                    <circle cx="181" cy="22" r="2.4" fill="currentColor"></circle>
+                </svg>
+
+                <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-[1.2fr_0.8fr] relative z-10">
+                    <div class="space-y-4">
+                        <p class="font-display text-xl font-medium text-blue-200">Você conhece a</p>
+                        <h1 class="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl">
+                            Liga Data<br/>Science?
+                        </h1>
+                        <p class="mt-4 max-w-lg text-lg text-blue-100 leading-relaxed">
+                            Um projeto de extensão composto por alunos da UFPR, movido pelo desafio de resolver problemas complexos e transformar dados em insights valiosos.
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                            <a href="projetos.html" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-900 transition-transform hover:-translate-y-0.5 shadow-lg">Ver Portfólio de Projetos</a>
+                            <a href="sobre.html" class="rounded-full border border-blue-300/50 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10">Sobre a Liga</a>
+                        </div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <div class="rounded-3xl bg-white p-8 shadow-2xl">
+                            <img src="logo_circulo.png" alt="Símbolo LDS" class="w-40 object-contain mx-auto"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MIOLO COM FUNDO BRANCO (Pilares da Liga) -->
+            <section class="mx-auto max-w-6xl px-6 py-16 bg-white">
+                <div class="rounded-3xl bg-slate-50 border border-slate-200 p-8 sm:p-14 shadow-sm relative overflow-hidden">
+                    <div class="grid gap-10 sm:grid-cols-3 text-center">
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl text-blue-700 font-bold">📊</span>
+                            <p class="font-display text-xl font-medium text-blue-900">A partir de dados</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl text-blue-700 font-bold">💡</span>
+                            <p class="font-display text-xl font-medium text-blue-900">surgem ideias</p>
+                        </div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-3xl text-blue-700 font-bold">⚙️</span>
+                            <p class="font-display text-xl font-medium text-blue-900">soluções</p>
+                        </div>
+                    </div>
+                    <p class="mx-auto mt-14 max-w-2xl text-center font-display text-2xl font-medium leading-snug text-blue-950">
+                        Somos movidos pelo desafio de resolver problemas complexos e transformar dados em insights valiosos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO DE DUAS COLUNAS INSPIRADA NO SITE OFICIAL -->
+            <section class="mx-auto max-w-6xl px-6 pb-20 bg-white">
+                <div class="grid gap-8 md:grid-cols-2">
+                    <article class="bg-slate-50 border border-slate-200 p-10 rounded-3xl shadow-sm space-y-3">
+                        <h2 class="font-display text-3xl font-bold text-blue-950">O que é a Liga?</h2>
+                        <p class="text-lg text-slate-600 leading-relaxed">A Liga Data Science é um projeto de extensão composto por alunos da UFPR.</p>
+                    </article>
+                    <article class="bg-slate-50 border border-slate-200 p-10 rounded-3xl shadow-sm space-y-3 text-right md:text-right">
+                        <h2 class="font-display text-3xl font-bold text-blue-950">Qual o nosso objetivo?</h2>
+                        <p class="text-lg text-slate-600 leading-relaxed">Difundir o conhecimento em ciência de dados no ambiente universitário.</p>
+                    </article>
+                </div>
+                <div class="mt-12 flex justify-center">
+                    <img src="logo_LDS.png" alt="Logotipo LDS" class="h-10 w-auto object-contain"/>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Oficial -->
+        <footer class="border-t border-slate-200 bg-white">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="logo_circulo.png" alt="Símbolo LDS" class="h-12 w-12 object-contain"/>
+                    <div>
+                        <p class="font-display text-lg font-bold text-blue-950">Liga Data Science</p>
+                        <p class="text-sm text-slate-500">Projeto de extensão da Universidade Federal do Paraná</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                    <a href="taocast.html" class="hover:text-blue-900 transition-colors font-semibold">TAOcast</a>
+                    <a href="https://www.youtube.com/@LigaDataScience" target="_blank" class="hover:text-blue-900 transition-colors">YouTube</a>
+                    <a href="https://www.linkedin.com/company/liga-data-science-ufpr" target="_blank" class="hover:text-blue-900 transition-colors">LinkedIn</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="hover:text-blue-900 transition-colors">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

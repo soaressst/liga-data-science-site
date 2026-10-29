@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Educativo — Liga Data Science UFPR</title>
+    <!-- Fontes oficiais Arquivo e Source Sans 3 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para Gráficos Interativos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Source Sans 3', 'sans-serif'],
+                        display: ['Archivo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <div class="flex min-h-screen flex-col">
+        <!-- Header Oficial (Fundo Branco com Sombra leve) -->
+        <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+                <a class="flex items-center gap-3" href="index.html">
+                    <img src="logo_LDS.png" alt="Logotipo Liga Data Science UFPR" class="h-8 w-auto object-contain"/>
+                    <span class="font-display font-bold text-lg tracking-tight text-blue-900">Liga Data Science</span>
+                </a>
+                <nav class="flex flex-wrap items-center justify-end gap-1 text-sm font-medium">
+                    <a class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900" href="index.html">Início</a>
+                    <a href="sobre.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Sobre</a>
+                    <a href="projetos.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Projetos</a>
+                    <a href="pipeline.html" class="rounded-full px-3.5 py-2 text-blue-900 bg-blue-50 transition-colors font-semibold">Pipeline (Teaching)</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1 bg-white">
+            <!-- Hero da Página Pipeline (Fundo Azul com Gráfico SVG de Trás) -->
+            <section class="relative overflow-hidden bg-[#162d50] text-white border-b border-blue-950">
+                <!-- Gráfico SVG de Fundo Transparente -->
+                <svg viewBox="0 0 200 100" class="pointer-events-none absolute inset-x-0 bottom-0 h-48 w-full text-blue-300/15" role="presentation" aria-hidden="true" preserveAspectRatio="none">
+                    <line x1="0" y1="20" x2="200" y2="20" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="40" x2="200" y2="40" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="60" x2="200" y2="60" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="80" x2="200" y2="80" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <rect x="6" y="62" width="14" height="38" rx="3" fill="currentColor" fill-opacity="0.18"></rect>
+                    <rect x="34" y="38" width="14" height="62" rx="3" fill="currentColor" fill-opacity="0.24"></rect>
+                    <rect x="62" y="54" width="14" height="46" rx="3" fill="currentColor" fill-opacity="0.3"></rect>
+                    <rect x="90" y="22" width="14" height="78" rx="3" fill="currentColor" fill-opacity="0.36"></rect>
+                    <rect x="118" y="45" width="14" height="55" rx="3" fill="currentColor" fill-opacity="0.42"></rect>
+                    <rect x="146" y="8" width="14" height="92" rx="3" fill="currentColor" fill-opacity="0.48"></rect>
+                    <rect x="174" y="30" width="14" height="70" rx="3" fill="currentColor" fill-opacity="0.54"></rect>
+                    <polyline points="13,54 41,30 69,46 97,14 125,37 153,0 181,22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                    <circle cx="13" cy="54" r="2.4" fill="currentColor"></circle>
+                    <circle cx="41" cy="30" r="2.4" fill="currentColor"></circle>
+                    <circle cx="69" cy="46" r="2.4" fill="currentColor"></circle>
+                    <circle cx="97" cy="14" r="2.4" fill="currentColor"></circle>
+                    <circle cx="125" cy="37" r="2.4" fill="currentColor"></circle>
+                    <circle cx="153" cy="0" r="2.4" fill="currentColor"></circle>
+                    <circle cx="181" cy="22" r="2.4" fill="currentColor"></circle>
+                </svg>
+
+                <div class="mx-auto max-w-6xl px-6 py-20 relative z-10 space-y-4">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-400/30">Front: Teaching & Pipeline</span>
+                    <h1 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight">O Ciclo de Vida dos Dados</h1>
+                    <p class="max-w-2xl text-blue-100 text-base leading-relaxed">
+                        Explore interativamente as camadas que transformam dados brutos em inteligência analítica na Liga de Data Science da UFPR.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Miolo com Fundo Branco (Conteúdo Educativo e Gráficos) -->
+            <section class="mx-auto max-w-5xl px-6 py-16 space-y-8 bg-white">
+                
+                <!-- Seletor Interativo de Estágios -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <button onclick="mudarEstagio('etl')" id="btn-etl" class="p-6 rounded-2xl border text-left transition bg-blue-50 border-blue-300 text-blue-950 shadow-sm font-semibold">
+                        <div class="text-blue-700 font-bold text-base mb-1">01. Engenharia & ETL</div>
+                        <div class="text-xs text-slate-600 font-normal">Scraping oficial do NC-UFPR e PostgreSQL.</div>
+                    </button>
+                    <button onclick="mudarEstagio('ml')" id="btn-ml" class="p-6 rounded-2xl border text-left transition bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300">
+                        <div class="text-purple-700 font-bold text-base mb-1">02. Ciência de Dados</div>
+                        <div class="text-xs text-slate-500 font-normal">Previsão por curso e validação da sobra.</div>
+                    </button>
+                    <button onclick="mudarEstagio('app')" id="btn-app" class="p-6 rounded-2xl border text-left transition bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300">
+                        <div class="text-emerald-700 font-bold text-base mb-1">03. Analytics & Full-Stack</div>
+                        <div class="text-xs text-slate-500 font-normal">Streamlit, FastAPI e Power BI.</div>
+                    </button>
+                </div>
+
+                <!-- Painel Dinâmico de Inspeção com Gráfico -->
+                <div class="bg-slate-50 border border-slate-200 p-8 sm:p-10 rounded-3xl shadow-sm space-y-6">
+                    <div id="conteudo-estagio" class="space-y-6">
+                        <!-- Injetado dinamicamente via JS -->
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer Oficial (Fundo Branco com Borda Cinza) -->
+        <footer class="border-t border-slate-200 bg-white">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="logo_circulo.png" alt="Símbolo LDS" class="h-12 w-12 object-contain"/>
+                    <div>
+                        <p class="font-display text-lg font-bold text-blue-950">Liga Data Science</p>
+                        <p class="text-sm text-slate-500">Projeto de extensão da Universidade Federal do Paraná</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                    <a href="https://www.youtube.com/@LigaDataScience" target="_blank" class="hover:text-blue-900 transition-colors">YouTube</a>
+                    <a href="https://www.linkedin.com/company/liga-data-science-ufpr" target="_blank" class="hover:text-blue-900 transition-colors">LinkedIn</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="hover:text-blue-900 transition-colors">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script Educativo e Gráficos Dinâmicos -->
+    <script>
+        let graficoInstancia = null;
+
+        const dadosEstagios = {
+            etl: {
+                titulo: "Fase 01: Engenharia de Dados & Arquitetura Relacional (ETL)",
+                badge: "Banco de Dados & Coleta",
+                badgeColor: "text-blue-800 bg-blue-100 border-blue-200",
+                descricao: "A Engenharia de Dados garante que a base seja confiável e conferida. Raspamos as tabelas oficiais do vestibular publicadas pelo Núcleo de Concursos, guardamos cada arquivo intocado e conferimos os números com o que a UFPR divulga.",
+                detalhes: [
+                    "<strong>Fontes:</strong> relação candidato/vaga (2003–2020), quadros de vagas dos guias e editais (2021–2027) e relatórios de ocupação das vagas (2016–2023) do NC-UFPR.",
+                    "<strong>Rastreabilidade:</strong> camadas raw → silver → gold; cada download registrado com link, data e hash. Só dados agregados por curso, sem listas nominais.",
+                    "<strong>Conferência:</strong> leituras batem com o C/V publicado e com os totais oficiais (ex.: 39.565 inscritos e 4.465 vagas em 2026).",
+                    "<strong>Armazenamento:</strong> esquema estrela no PostgreSQL (Supabase), schema <code>ufpr_analytics</code>."
+                ],
+                tipoGrafico: 'bar',
+                labelsGrafico: ['2003', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+                dadosGrafico: [47.9, 43.9, 45.4, 42.6, 40.5, 42.0, 42.1, 41.3, 43.6, 41.4, 50.4, 48.8, 47.8, 50.6, 38.5, 30.7, 33.0, 35.1, 36.2, 37.0, 39.6],
+                labelDataset: 'Inscritos no vestibular (mil) — anos com dado por curso',
+                corGrafico: '#1d4ed8'
+            },
+            ml: {
+                titulo: "Fase 02: Ciência de Dados & Modelagem Preditiva",
+                badge: "Modelagem Estatística",
+                badgeColor: "text-purple-800 bg-purple-100 border-purple-200",
+                descricao: "A Ciência de Dados projeta a procura de cada curso e mede, com dados reais, o quanto pode confiar nessa projeção.",
+                detalhes: [
+                    "<strong>Modelo:</strong> suavização exponencial simples por curso. Testado contra os anos reais, empata com \"repetir o último ano\" e erra cerca de metade do Holt (modelo com tendência).",
+                    "<strong>Por quê:</strong> a variação de cada curso tende a se desfazer no ano seguinte (correlação −0,41); seguir tendência amplifica ruído.",
+                    "<strong>Incerteza:</strong> cada previsão sai com faixa de 80% calculada pelos erros reais do modelo.",
+                    "<strong>Validação:</strong> nos relatórios de ocupação 2016–2022, cursos abaixo de 1 candidato por vaga terminaram com vaga sobrando em 100% dos casos (gráfico)."
+                ],
+                tipoGrafico: 'bar',
+                labelsGrafico: ['0–0,5', '0,5–1', '1–1,5', '1,5–2', '2–3', '3–5', '> 5'],
+                dadosGrafico: [100, 100, 57, 9, 5, 2, 0],
+                labelDataset: '% de cursos que terminaram com vaga sobrando, por faixa de candidatos/vaga',
+                corGrafico: ['#b91c1c', '#b91c1c', '#b91c1c', '#d97706', '#d97706', '#7c3aed', '#7c3aed']
+            },
+            app: {
+                titulo: "Fase 03: Aplicação, API e Visualização",
+                badge: "Full-Stack & BI",
+                badgeColor: "text-emerald-800 bg-emerald-100 border-emerald-200",
+                descricao: "A camada de apresentação transforma as previsões em ferramentas para quem decide: um app aberto, uma API e um relatório de BI, todos lendo o mesmo banco.",
+                detalhes: [
+                    "<strong>Web App:</strong> Streamlit com o risco de sobra de vagas no Vestibular 2027 e simulação de cenários.",
+                    "<strong>API:</strong> FastAPI com endpoints de cursos e indicadores.",
+                    "<strong>Business Intelligence:</strong> Power BI versionado em formato de projeto (TMDL), lendo o Supabase.",
+                    "<strong>Resultado 2027:</strong> 30 cursos com sobra certa e 15 com risco alto, concentrados no interior e em cursos de nicho."
+                ],
+                tipoGrafico: 'bar',
+                labelsGrafico: ['Curitiba', 'Matinhos', 'Palotina', 'Jandaia do Sul', 'Pontal do Paraná', 'Toledo'],
+                dadosGrafico: [14, 7, 4, 3, 2, 0],
+                labelDataset: 'Cursos com sobra certa prevista em 2027, por campus',
+                corGrafico: '#059669'
+            }
+        };
+
+        function mudarEstagio(estagioKey) {
+            ['etl', 'ml', 'app'].forEach(k => {
+                const btn = document.getElementById(`btn-${k}`);
+                if(k === estagioKey) {
+                    btn.className = "p-6 rounded-2xl border text-left transition bg-blue-50 border-blue-300 text-blue-950 shadow-sm font-semibold";
+                } else {
+                    btn.className = "p-6 rounded-2xl border text-left transition bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300 font-normal";
+                }
+            });
+
+            const data = dadosEstagios[estagioKey];
+            const container = document.getElementById("conteudo-estagio");
+
+            container.innerHTML = `
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border ${data.badgeColor}">${data.badge}</span>
+                    <span class="text-xs text-slate-500 font-medium">Módulo Educativo LDS</span>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-slate-900">${data.titulo}</h3>
+                <p class="text-slate-700 text-sm leading-relaxed">${data.descricao}</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pt-2">
+                    <div class="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-600">Pilares Técnicos:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-xs text-slate-700 leading-relaxed">
+                            ${data.detalhes.map(d => `<li>${d}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center justify-center">
+                        <div class="w-full h-64 relative">
+                            <canvas id="graficoEstagio"></canvas>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            renderizarGraficoEstagio(data);
+        }
+
+        function renderizarGraficoEstagio(data) {
+            const ctx = document.getElementById('graficoEstagio').getContext('2d');
+            
+            if (graficoInstancia) {
+                graficoInstancia.destroy();
+            }
+
+            let configuracao = {
+                type: data.tipoGrafico,
+                data: {
+                    labels: data.labelsGrafico,
+                    datasets: [{
+                        label: data.labelDataset,
+                        data: data.dadosGrafico,
+                        backgroundColor: data.corGrafico,
+                        borderColor: Array.isArray(data.corGrafico) ? '#ffffff' : data.corGrafico,
+                        borderWidth: 1,
+                        tension: 0.3,
+                        fill: data.tipoGrafico === 'line'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { 
+                            display: data.tipoGrafico === 'doughnut', 
+                            position: 'bottom',
+                            labels: { color: '#334155', font: { size: 10 } } 
+                        }
+                    },
+                    scales: data.tipoGrafico === 'doughnut' ? {} : {
+                        x: { ticks: { color: '#64748b', font: { size: 9 } }, grid: { color: 'rgba(226, 232, 240, 1)' } },
+                        y: { ticks: { color: '#64748b', font: { size: 9 } }, grid: { color: 'rgba(226, 232, 240, 1)' } }
+                    }
+                }
+            };
+
+            graficoInstancia = new Chart(ctx, configuracao);
+        }
+
+        // Carregar estágio inicial ao abrir
+        mudarEstagio('etl');
+    </script>
+</body>
+</html>

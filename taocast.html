@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAOcast — Liga Data Science UFPR</title>
+    <!-- Fontes oficiais Arquivo e Source Sans 3 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Source Sans 3', 'sans-serif'],
+                        display: ['Archivo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <div class="flex min-h-screen flex-col">
+        <!-- Header Oficial -->
+        <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+                <a class="flex items-center gap-3" href="index.html">
+                    <img src="logo_LDS.png" alt="Logotipo Liga Data Science UFPR" class="h-8 w-auto object-contain"/>
+                    <span class="font-display font-bold text-lg tracking-tight text-blue-900">Liga Data Science</span>
+                </a>
+                <nav class="flex flex-wrap items-center justify-end gap-1 text-sm font-medium">
+                    <a class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900" href="index.html">Início</a>
+                    <a href="sobre.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Sobre</a>
+                    <a href="projetos.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Projetos</a>
+                    <a href="pipeline.html" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Pipeline (Teaching)</a>
+                    <a href="taocast.html" class="rounded-full px-3.5 py-2 text-blue-900 bg-blue-50 transition-colors font-semibold">TAOcast</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="rounded-full px-3.5 py-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-blue-900">Contato</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1 bg-white">
+            <!-- Hero da Página TAOcast -->
+            <section class="relative overflow-hidden bg-[#162d50] text-white border-b border-blue-950">
+                <!-- Gráfico SVG de Fundo Transparente -->
+                <svg viewBox="0 0 200 100" class="pointer-events-none absolute inset-x-0 bottom-0 h-48 w-full text-blue-300/15" role="presentation" aria-hidden="true" preserveAspectRatio="none">
+                    <line x1="0" y1="20" x2="200" y2="20" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="40" x2="200" y2="40" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="60" x2="200" y2="60" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <line x1="0" y1="80" x2="200" y2="80" stroke="currentColor" stroke-opacity="0.15" stroke-width="0.6"></line>
+                    <rect x="6" y="62" width="14" height="38" rx="3" fill="currentColor" fill-opacity="0.18"></rect>
+                    <rect x="34" y="38" width="14" height="62" rx="3" fill="currentColor" fill-opacity="0.24"></rect>
+                    <rect x="62" y="54" width="14" height="46" rx="3" fill="currentColor" fill-opacity="0.3"></rect>
+                    <rect x="90" y="22" width="14" height="78" rx="3" fill="currentColor" fill-opacity="0.36"></rect>
+                    <rect x="118" y="45" width="14" height="55" rx="3" fill="currentColor" fill-opacity="0.42"></rect>
+                    <rect x="146" y="8" width="14" height="92" rx="3" fill="currentColor" fill-opacity="0.48"></rect>
+                    <rect x="174" y="30" width="14" height="70" rx="3" fill="currentColor" fill-opacity="0.54"></rect>
+                    <polyline points="13,54 41,30 69,46 97,14 125,37 153,0 181,22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                    <circle cx="13" cy="54" r="2.4" fill="currentColor"></circle>
+                    <circle cx="41" cy="30" r="2.4" fill="currentColor"></circle>
+                    <circle cx="69" cy="46" r="2.4" fill="currentColor"></circle>
+                    <circle cx="97" cy="14" r="2.4" fill="currentColor"></circle>
+                    <circle cx="125" cy="37" r="2.4" fill="currentColor"></circle>
+                    <circle cx="153" cy="0" r="2.4" fill="currentColor"></circle>
+                    <circle cx="181" cy="22" r="2.4" fill="currentColor"></circle>
+                </svg>
+
+                <div class="mx-auto max-w-6xl px-6 py-20 relative z-10 space-y-4">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-400/30">Podcast Oficial</span>
+                    <h1 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight">TAOcast</h1>
+                    <p class="max-w-2xl text-blue-100 text-base leading-relaxed">
+                        O podcast da Liga Data Science UFPR, onde dados viram histórias: carreira, projetos e os bastidores da ciência de dados na universidade.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Miolo com Fundo Branco (Detalhes do TAOcast) -->
+            <section class="mx-auto max-w-5xl px-6 py-16 space-y-12 bg-white">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-sm space-y-4">
+                        <div class="text-3xl">🎙️</div>
+                        <h3 class="font-display text-xl font-bold text-slate-900">Conversas com quem faz</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Bate-papos com estudantes, professores e profissionais sobre dados, inteligência artificial e mercado de trabalho.</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-sm space-y-4">
+                        <div class="text-3xl">🎧</div>
+                        <h3 class="font-display text-xl font-bold text-slate-900">Episódios acessíveis</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Temas técnicos explicados de forma leve, para quem está começando ou já atua na área.</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-sm space-y-4">
+                        <div class="text-3xl">📺</div>
+                        <h3 class="font-display text-xl font-bold text-slate-900">Onde assistir</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Novos episódios publicados regularmente no canal oficial da Liga no YouTube.</p>
+                        <div class="pt-2">
+                            <a href="https://www.youtube.com/@LigaDataScience" target="_blank" class="text-xs font-semibold text-blue-700 hover:text-blue-900">Acessar canal ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer Oficial -->
+        <footer class="border-t border-slate-200 bg-white">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex items-center gap-4">
+                    <img src="logo_circulo.png" alt="Símbolo LDS" class="h-12 w-12 object-contain"/>
+                    <div>
+                        <p class="font-display text-lg font-bold text-blue-950">Liga Data Science</p>
+                        <p class="text-sm text-slate-500">Projeto de extensão da Universidade Federal do Paraná</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+                    <a href="taocast.html" class="hover:text-blue-900 transition-colors font-semibold">TAOcast</a>
+                    <a href="https://www.youtube.com/@LigaDataScience" target="_blank" class="hover:text-blue-900 transition-colors">YouTube</a>
+                    <a href="https://www.linkedin.com/company/liga-data-science-ufpr" target="_blank" class="hover:text-blue-900 transition-colors">LinkedIn</a>
+                    <a href="https://www.instagram.com/ligadatascience" target="_blank" class="hover:text-blue-900 transition-colors">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
